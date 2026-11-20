@@ -8,8 +8,9 @@ WORKDIR /app
 COPY requirements-dev.txt .
 RUN pip install --no-cache-dir -r requirements-dev.txt
 
-# Ensuite le code
-# À COMPLÉTER : copier tout le dossier courant dans l'image
+# Ensuite le code : copier tout le dossier courant dans l'image
+COPY . .
 
 # La commande lancée au démarrage d'un conteneur
-# À COMPLÉTER : lancer pytest en mode verbeux
+# Lancer pytest en mode verbeux
+CMD ["pytest", "-v"]
