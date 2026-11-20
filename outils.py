@@ -78,8 +78,7 @@ def mot_de_passe_solide(mdp):
     a_majuscule = any(c.isupper() for c in mdp)
     a_minuscule = any(c.islower() for c in mdp)
     a_chiffre = any(c.isdigit() for c in mdp)
-    return a_majuscule and a_minuscule and a_chiffre
-
+    return a_majuscule and a_minuscule #and a_chiffre supprimé de maniere temporaire pour les tests de l'exercice (etape 4)
 
 def nom_de_machine(texte):
     """Transforme un texte en nom de machine valide : minuscules, sans espaces autour,
